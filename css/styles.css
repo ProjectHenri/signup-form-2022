@@ -1,0 +1,67 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --btn-color: rgb(112,112,112);
+    --font: 'Work Sans', sans-serif;
+    --white: rgb(255,255,255);
+}
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font);
+}
+body{
+    min-height: 100vh;
+    display: flex;
+}
+.leftContainer{
+    display: flex;
+    flex-direction: column;
+    flex:1;
+    background: url(../img/background.jpg) no-repeat center;
+    background-size: cover;
+}
+.leftContainer > div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding:1rem 2rem;
+    background-color: rgba(0,0,0, 0.5);
+    margin-top:20vh;
+}
+img{
+    width:3rem;
+}
+.leftContainer h1{
+    color:var(--white);
+    font-size:2.5rem;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.leftContainer p{
+    color: var(--white);
+    text-align: center;
+    margin-top: auto;
+    padding:1.5rem;
+}
+.leftContainer a{
+    color:var(--white);
+    line-height: 1.5rem;
+}
+.leftContainer a:hover{
+    color:rgb(210,210,210);
+}
+/* .leftContainer a:active, .leftContainer a:visited{
+    color:rgb(180,180,180);
+} */
+.rightContainer{
+    flex:2;
+}
+@media all and (max-width:700px){
+    body{
+        flex-direction: column;
+    }
+}
