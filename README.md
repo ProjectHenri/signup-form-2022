@@ -6,6 +6,7 @@
     <li>Used <strong>Flexbox</strong> for the layout</li>
     <li>Used many CSS <strong>pseudo classes</strong> and <strong>pseudo elements</strong> to style the sign up form</li>
     <li>Used different CSS <strong>functions</strong> and <strong>sizing units</strong> to make the page responsive</li>
+    <li>Used <strong>regular expressions</strong> to validate form input fields</li>
 </ul>
 
 <h2>Credit</h2>
