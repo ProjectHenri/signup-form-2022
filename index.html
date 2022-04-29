@@ -11,12 +11,59 @@
     <div class="leftContainer">
         <div>
             <img src="./img/odin-lined.png" alt="Logo">
-            <h1>Odin</h1>
+            <h1>Æsir</h1>
         </div>
         <p>Photo by <a href="https://unsplash.com/@eberhardgross">eberhardgross</a>
-             on <a href="https://unspalsh.com">Unspalsh</a>
+             on <a href="https://unspalsh.com">Unsplash</a>
         </p>
     </div>
-    <div class="rightContainer"></div>
+    <div class="rightContainer">
+        <div class="intro">
+            <p>DISCLAIMER: This is not a real service</p>
+            <h2>Create an account</h2>
+        </div>
+        <form id="login-form" action="./index.html" method="post">
+            <p>Fields marked with * are required. Passwords must contain one capital, one lowercase letter and a number</p>
+            <div class="form-row">
+                <div>
+                    <label for="firstName">First name<abbr title="Required">*</abbr></label></label>
+                    <input type="text" name="firstName" id="firstName" pattern="[a-zA-Z0-9]+"
+                    placeholder=" ">
+                </div>
+                <div>
+                    <label for="lastName">Last name<abbr title="Required">*</abbr></label></label>
+                    <input type="text" name="lastName" id="lastName" pattern="[a-zA-Z0-9]+" 
+                    placeholder=" ">
+                </div>
+            </div>
+            <div class="form-row">
+                <div>
+                    <label for="email">Email<abbr title="Required">*</abbr></label>
+                    <input type="email" name="email" id="email" placeholder=" " 
+                    required>
+                </div>
+                <div>
+                    <label for="phone">Phone<abbr title="Required">*</abbr></label></label>
+                    <input type="tel" name="phone" id="phone" pattern="\+?\d+" placeholder=" ">
+                </div>
+            </div>
+            <div class="form-row">
+                <div>
+                    <label for="password">Password<abbr title="Required">*</abbr></label>
+                    <input type="password" name="password" id="password" 
+                    pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$"
+                    placeholder=" " required>
+                </div>
+                <div>
+                    <label for="confirm-password">Confirm password<abbr title="Required">*</abbr></label>
+                    <input type="password" name="confirm-password" id="confirm-password" 
+                    pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$"
+                    placeholder=" " required>
+                </div>
+            </div>
+        </form>
+        <button form="signup-form" type="submit">Create account</button>
+        <p>Already have an account? <a href="./index.html">Log in</a></p>
+    </div>
 </body>
 </html>

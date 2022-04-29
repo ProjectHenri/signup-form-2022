@@ -1,21 +1,27 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&family=Skranji:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root{
-    --btn-color: rgb(112,112,112);
-    --font: 'Work Sans', sans-serif;
+    --main-color: rgb(21, 59, 69);
+    --content-font: 'Work Sans', sans-serif;
+    --nordic-font: 'Skranji', sans-serif;
     --white: rgb(255,255,255);
+    --error-color:rgb(232, 83, 83);
 }
+
 *, *::before, *::after{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: var(--font);
+    font-family: var(--content-font);
 }
+
 body{
     min-height: 100vh;
     display: flex;
 }
+
 .leftContainer{
     display: flex;
     flex-direction: column;
@@ -23,45 +29,186 @@ body{
     background: url(../img/background.jpg) no-repeat center;
     background-size: cover;
 }
+
 .leftContainer > div{
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 1rem;
     padding:1rem 2rem;
-    background-color: rgba(0,0,0, 0.5);
+    background-color: rgba(0, 0, 0, 0.5);
     margin-top:20vh;
 }
+
 img{
     width:3rem;
 }
+
 .leftContainer h1{
     color:var(--white);
     font-size:2.5rem;
     text-transform: uppercase;
-    font-weight: 500;
+    font-weight: 400;
+    letter-spacing: 6px;
+    font-family: var(--nordic-font);
 }
+
 .leftContainer p{
     color: var(--white);
     text-align: center;
     margin-top: auto;
     padding:1.5rem;
 }
+
 .leftContainer a{
     color:var(--white);
     line-height: 1.5rem;
 }
+
 .leftContainer a:hover{
     color:rgb(210,210,210);
 }
-/* .leftContainer a:active, .leftContainer a:visited{
+
+.leftContainer a:active, .leftContainer a:visited{
     color:rgb(180,180,180);
-} */
+}
+
 .rightContainer{
     flex:2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
-@media all and (max-width:700px){
+
+.rightContainer .intro{
+    margin:25px 0px;
+    display: flex;
+    flex-direction: column;
+    padding:0 1rem;
+    align-items: center;
+    gap:2rem;
+}
+
+.rightContainer .intro > p{
+    color:rgba(112,112,112,0.8);
+    font-size:1rem;
+    text-transform: uppercase;
+}
+
+.rightContainer .intro > h2{
+    color:var(--main-color);
+    font-size:2rem;
+}
+
+.rightContainer form{
+    width: min(600px,90%);
+    box-shadow:0 0 6px rgba(112,112,112,0.15);
+    padding:2rem 2rem;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    gap:1.5rem;
+}
+
+.rightContainer form > p{
+    text-align: center;
+    padding:0.5rem;
+}
+
+.form-row{
+    display: flex;
+    flex-wrap: wrap;
+    gap:1.5rem;
+}
+
+.form-row > div{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    gap:0.5rem;
+}
+
+label{
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    font-weight:400;
+    font-size:0.9rem;
+    color: var(--main-color)
+}
+
+abbr[title] {
+    text-decoration: none;
+    font-size:0.8rem;
+    color:var(--error-color);
+    padding:0 1px;
+}
+
+input{
+    padding:6px 4px;
+    font-size:1rem;
+    outline: none;
+    border: 2px solid rgb(220,220,220);
+}
+
+input:focus{
+    border:2px solid var(--main-color);
+    box-shadow: 0 0 6px rgb(21,59,69, 0.1);
+
+}
+
+input:valid:not(:placeholder-shown){
+    background: url(../img/check.svg);
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: 96% 50%;
+}
+
+input:invalid:not(:focus):not(:placeholder-shown){
+    border:2px solid var(--error-color);
+}
+
+button{
+    border: none;
+    outline: none;
+    color:var(--white);
+    background-color: var(--main-color);
+    padding:14px 16px;
+    font-size:1rem;
+    text-transform: uppercase;
+    border-radius: 2px;
+    font-weight:500;
+    letter-spacing: 0.8px;
+    margin:25px 0;
+    cursor: pointer;
+}
+
+button:hover{
+    opacity:0.9;
+}
+
+.rightContainer > p a{
+    color: var(--main-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.rightContainer > p a:hover{
+    opacity:0.9;
+}
+
+.rightContainer > p a:visited{
+    opacity:0.8;
+}   
+
+@media all and (max-width:915px){
     body{
         flex-direction: column;
+    }
+    .leftContainer > div{
+        margin-top:10vh;
+    }
+    .rightContainer{
+        padding:3rem 0;
     }
 }
